@@ -1,0 +1,39 @@
+{
+  "name": "arocom",
+  "description": "Run end-to-end tests",
+  "license": "GPL-2.0-or-later",
+  "version": "1.0.0",
+  "author": {
+    "name": "Michael A. Johnson Lucas",
+    "email": "johnson@arocom.de"
+  },
+  "contributors": [],
+  "main": "tests/",
+  "homepage": "https://www.arocom.de",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "keywords": [
+    "functional",
+    "typescript",
+    "ES6"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arocom-michael/testcafe.git"
+  },
+  "bugs": "johnson@arocom.de",
+  "scripts": {
+    "test": "./node_modules/.bin/testcafe chrome tests/test-js.js",
+    "test-typescript": "./node_modules/.bin/testcafe chrome tests/test-ts.ts",
+    "test-fullscreen": "./node_modules/.bin/testcafe 'chrome --start-fullscreen' tests/test-js.js",
+    "test-two": "./node_modules/.bin/testcafe chrome,firefox tests/test-js.js",
+    "test-concurrent": "./node_modules/.bin/testcafe -c 2 chrome tests/test-js.js",
+    "test-live": "./node_modules/.bin/testcafe-live chrome tests/test-js.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "testcafe": "^0.19.2",
+    "testcafe-live": "^0.1.3"
+  }
+}
